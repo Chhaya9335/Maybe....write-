@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static %}
+     <style>
+    *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            /* background-color: rgb(255, 201, 241,0.8); */
+            color: rgb(61, 44, 2);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+            display: flex;
+            flex-direction: column;
+             align-items: center;
+             text-align: center;
+           justify-content: center;
+            background-image:url("{% static 'photo.png' %}");
+           background-attachment:fixed ;
+           background-repeat: no-repeat;
+           background-position: center;
+           background-size: cover;
+           position: relative;
+              
+            
+        }
+        body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.6);
+    z-index: -1;
+ 
+}
+        h1{
+             color: rgb(21, 38, 224);
+      text-align: center;
+      justify-content: center;
+      text-decoration: underline;
+      margin-bottom: 20px;
+        }
+         h3{
+            color: black;
+            text-decoration: underline;
+         }
+         .div{
+            /* padding: 15vh; */
+            margin-top: 5vh;
+            text-decoration: none;
+            gap: 20vh;
+            height: 80vh;
+            width: 50vw;
+            font-size: 2.5vh;
+            /* background-color: pink; */
+         }
+         a{
+            color:red;
+         }
+       
+        </style>
+</head>
+<body><h1>Fictions</h1>
+    <h3>Imaginative worlds and characters brought to life...</h3>
+<div class="div"> 
+    <a href="/fiction/"> "The Clockmaker's Secret".</a><br><br>
+  
+    <a href="/beauty/"> Beauty and the Beast – a tale of love breaking a curse.</a><br><br>
+  <a href="/cindrella/ ">Cinderella – a girl’s life changes with a glass slipper.</a><br><br>
+   <a href="/little/">The Little Match Girl – a heart-touching story of hope.</a><br><br>
+   
+     <a href="/aladin/">Aladdin and the Magic Lamp – adventure with a genie</a><br><br>
+     <a href="/fiction1/">"From Poster to Past: The Idol She Left Behind"</a><br><br>
+   
+       
+       
+</div>
+</body>
+</html>

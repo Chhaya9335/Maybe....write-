@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static %}
+     <style>
+    *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            /* background-color: rgb(255, 201, 241,0.8); */
+            color: rgb(61, 44, 2);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+            display: flex;
+            flex-direction: column;
+             align-items: center;
+             text-align: center;
+           justify-content: center;
+         background-image:url("{% static 'photo.png' %}");
+           background-attachment:fixed ;
+           background-repeat: no-repeat;
+           background-position: center;
+           background-size: cover;
+           position: relative;
+              
+            
+        }
+        body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.6);
+    z-index: -1;
+ 
+}
+        h1{
+             color: rgb(3, 85, 156);
+      text-align: center;
+      justify-content: center;
+      text-decoration: underline;
+      margin-bottom: 20px;
+        }
+         h3{
+            color: black;
+            text-decoration: underline;
+         }
+         .div{
+            /* padding: 15vh; */
+            margin-top: 5vh;
+            gap: 20vh;
+            height: 80vh;
+            text-decoration: none;
+            width: 50vw;
+            font-size: 2.5vh;
+            /* background-color: pink; */
+         }
+       a{
+        color: red;
+       }
+        </style>
+</head>
+<body><h1>Stories</h1>
+    <h3>Little moments often Create the most memorable stories....</h3>
+<div class="div">       
+    <a href="/kahani/">"Unspoken Innocence-Lekhani"</a><br><br>
+    <a href="/story/">“The Last Letter"</a><br><br>
+    <a href="/last/">“The last lesson.-Alphonse Daudet"</a><br><br>
+    <a href="/lost/">“Lost spring-Anees jung"</a><br><br>
+    <a href="/necklace/"> “The Necklace-Guy de Maupassannt".</a><br><br>
+    <a href="/happy/">“ The happy Prince-oscar Wilde."</a><br><br>
+    <a href="/poosh/">“पूस की रात-प्रेमचंद"</a><br><br>
+    <a href="/bail/">दो बैलों की कथा-प्रेमचंद"></a><br><br>
+    <a href="/kahani2/">“A beautiful birthday-Lekhani"</a><br><br>
+    <a href="/kahani3/">"Wrenches and code- Lekhani"</a><br><br>
+    <a href="/kahani4/">"Dear Future Me- Lekhani"</a><br><br>
+  
+       
+</div>
+</body>
+</html>

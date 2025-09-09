@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+      * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: black;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+    color: #d4af37;
+    padding-bottom: 2rem;
+}
+
+header {
+    background: #000;
+    padding: 3vh 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1200px;
+    height: 8vh;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 5vh;
+    color: #d4af37;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin-left: 4vh;
+    font-size: 3vh;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+#views {
+    width: 100vw;
+    background: #1a1a1a;
+    padding: 1rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.class {
+    width: 90vw;
+    max-width: 600px;
+    color: #d4af37;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.text {
+    margin-top: 2rem;
+    width: 90vw;
+    max-width: 600px;
+    font-size: 2rem;
+    color: #d4af37;
+}
+
+.style {
+    width: 90vw;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    margin: 0.5rem 0;
+    padding: 10px;
+    background: #222;
+    border-radius: 4px;
+    color: #d4af37;
+}
+
+.check {
+    width: 100%;
+    color: #d4af37;
+    display: inline-block;
+    font-size: large;
+}
+
+button {
+    height: 6vh;
+    width: 100%;
+    max-width: 150px;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: 0.5vh solid rgb(199, 170, 5);
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: rgb(236, 227, 227);
+}
+
+button:active {
+    background-color: grey;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+    header h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+        font-size: 4vw;
+    }
+    .class, .text, .style {
+        width: 95vw;
+        max-width: none;
+    }
+    button {
+        max-width: none;
+        font-size: 4vw;
+        height: 8vh;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    nav a {
+        font-size: 5vw;
+        margin: 0 0.5rem 0.5rem 0;
+        display: inline-block;
+    }
+    .text {
+        font-size: 5vw;
+        margin-top: 1rem;
+    }
+}
+
+/*         
+ footer {
+    /* background-color: #fff; 
+    height: 7vh;
+    width: 98vw;
+   position: fixed;
+    background: #000; 
+    text-align: center;
+    padding: 3vh 0;
+    color: #d4af37;
+}  */
+ </style>
+ 
+</head>
+<body>
+     <header>
+        <div class="container">
+            <h1>Maybe...Write</h1>
+            <nav>
+                  <a href="/index/">Home</a>
+                <a href="/my-creation/">My Creations</a>
+                <a href="/true-writers/">True Writers</a>
+                <a href="/about/">About</a>
+                <a href="/reviews/">Reviews</a>
+            </nav>
+        </div>
+    </header>
+<section id="views">
+       <div class="check">
+   <div class="class"> <h2>Leave a Review</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+</div>
+<div class="text"><h2>What People Say</h2></div>
+{% for review in reviews %}
+    <div class="style" style="border:1px solid #ccc; margin:7px; padding:10px;">
+        <strong>{{ review.name }}</strong> ({{ review.rating }}⭐)  
+        <p>{{ review.comment }}</p>
+        <small>Posted on {{ review.created_at }}</small>
+    </div>
+{% empty %}
+    <p>No reviews yet. Be the first!</p>
+{% endfor %}
+</div>
+</section>
+
+<!-- {% if messages %}
+    {% for message in messages %}
+        <p style="color:green;">{{ message }}</p>
+    {% endfor %}
+{% endif %}  -->
+  <!-- <footer style="position: fixed;">
+         <p>&copy; 2025 Maybe...Write. Created by Lekhani. “A reader lives a thousand lives...”</p>
+    </footer> -->
+</body>
+</html>

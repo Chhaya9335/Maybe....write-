@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Maybe...Write</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      background-color: #151515;
+      font-family: Georgia, serif;
+      color: #eaf20a;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      background-color: #161516;
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 8px;
+    }
+
+    .about-content h2 {
+      font-size: 4vh;
+      margin-bottom: 20px;
+      color: #eea5a5;
+    }
+
+    .about-content p {
+      margin-bottom: 20px;
+      font-size: 3vh;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 24px;
+      background-color: #6e3b3b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .btn:hover {
+      background-color: #552a2a;
+    }
+
+    header {
+      background: black;
+      padding: 8px 0;
+    }
+
+    header .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 5vh;
+      color: #d4af37;
+      flex: 1 1 100%;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    nav {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 3vh;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    footer {
+      height: 10vh;
+      width: 100vw;
+      background: #000;
+      text-align: center;
+      padding: 3vh 10px;
+      color: #d4af37;
+      font-size: 1rem;
+      position: relative;
+      bottom: 0;
+      margin-top: 2rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .about-section {
+        padding: 40px 15px;
+      }
+
+      .about-content h2 {
+        font-size: 6vw;
+      }
+
+      .about-content p {
+        font-size: 4vw;
+      }
+
+      header h1 {
+        font-size: 7vw;
+        margin-bottom: 12px;
+      }
+
+      nav a {
+        font-size: 4vw;
+        margin: 0 8px;
+      }
+
+      .btn {
+        font-size: 4vw;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Maybe...Write</h1>
+      <nav>
+        <a href="/index/">Home</a>
+        <a href="/my-creation/">My Creations</a>
+        <a href="/true-writers/">True Writers</a>
+        <a href="/about/">About</a>
+        <a href="/reviews/">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="about-section">
+    <div class="about-content">
+      <h2>About</h2>
+      <p>
+        Welcome to a space where words matter. This website is a literary archive — a digital home for
+        original stories, poems, essays, and reflections written by thoughtful writers and myself.
+        Each piece you find here is crafted with intention, emotion, and authenticity.
+      </p>
+      <p>
+        Our goal is to preserve meaningful writing and make it accessible to readers who value depth
+        over noise. Whether you're here to read, reflect, or contribute, you're part of a community
+        that believes in the power of storytelling.
+      </p>
+      <p>
+        Thank you for visiting, and for supporting real voices in a world often crowded by algorithms.
+      </p>
+
+      <a href="/contribution/" class="btn">Join or Contribute</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Maybe...Write. Created by Lekhani. “A reader lives a thousand lives...”</p>
+  </footer>
+</body>
+</html>
