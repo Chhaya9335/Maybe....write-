@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-6+q2$6r(n$)iu)w5r^50=1nmthngu6*+j+l-8uwlxi-imdk4_z'
+SECRET_KEY = 'django-insecure-6+q2$6r(n$)iu)w5r^50=1nmthngu6*+j+l-8uwlxi-imdk4_z'
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -55,12 +55,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sample.urls'
+ROOT_URLCONF = 'mysample.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,'templates'],
+        'DIRS': [BASE_DIR /'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

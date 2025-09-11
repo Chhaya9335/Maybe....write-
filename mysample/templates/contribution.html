@@ -1,104 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <title>Document</title>
-    <style>*{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanks for Visiting</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-        body{
-            height: 100vh;
-            width: 100vw;
-            background-color: black;
-line-height: 1.7;
- display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .class{
-            height: 60vh;
-            width: 50vw;
-            /* background-color:red; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            color: goldenrod;
-             margin: 5vh solid gold;
-        }
-        #contribution{
-            height: 30vh;
-            width: 70vw;
-            background-color: aliceblue;
-            color: rgb(92, 67, 3);
-            border: 2vh solid rgb(146, 124, 0);
-            font-size: 3vh;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        h2{
-            font-size: 5vh;
-        }
-        h3{
-            font-size: 4vh;
 
-        }
-        button{
-            height: 6vh;
-            width: 7vw;
-           font-size: large;
-           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
-            background-color: rgb(224, 208, 208);
-          border: 0.6vh solid rgb(199, 170, 5);
-        }
-        button:hover{
-            background-color: rgb(159, 157, 157);
-        }
-        button:active{
-            background-color: grey;
-        }
-        
-        </style>
- <!-- <script>
-    function tap() {
-        // Get the button and textarea
-        let button = document.getElementById('submitBtn');
-        let textarea = document.getElementById('contribution');
-        let reviewText = textarea.value.trim();
-
-        if (reviewText !== '') {
-            alert("Review submitted!\n\n" + reviewText);
-            // Clear the textarea
-            textarea.value = '';
-
-            // Change button text to "Submitted"
-            button.textContent = 'Submitted';
-
-            // Change button back to "Submit" after 2 seconds
-            setTimeout(function () {
-                button.textContent = 'Submit';
-            }, 2000);
-        } else {
-            alert("Please write something before submitting!");
-        }
+    body {
+      min-height: 100vh;
+      background-color: black;
+      color: goldenrod;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5vh 4vw;
     }
-</script> -->
+
+    .class {
+      width: 100%;
+      max-width: 600px;
+      background-color: #111;
+      border: 2px solid goldenrod;
+      padding: 4vh 3vw;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 3.5vh;
+      margin-bottom: 2vh;
+    }
+
+    h3 {
+      font-size: 2.5vh;
+      margin-top: 3vh;
+    }
+
+    form {
+      margin-top: 2vh;
+    }
+
+    form p {
+      text-align: left;
+      margin-bottom: 2vh;
+      color: white;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 1.2vh 1vw;
+      font-size: 2vh;
+      border: 2px solid goldenrod;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      margin-top: 0.5vh;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      color:rgb(92,67,3);
+    }
+
+    button {
+      margin-top: 2vh;
+      padding: 1.5vh 4vw;
+      font-size: 2vh;
+      border: 2px solid goldenrod;
+      background-color: #f5f5f5;
+      color: black;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d6d6d6;
+    }
+
+    button:active {
+      background-color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 2.8vh;
+      }
+
+      h3 {
+        font-size: 2.2vh;
+      }
+
+      button {
+        width: 100%;
+        padding: 1.5vh;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="class">
-        <h2> Thanks for visiting...!!</h2>
-         <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-              <button type="submit">Submit</button>
-        </form>
-   <!-- <textarea name="" id="contribution"></textarea> -->
-<h3> Thanks for your Contributions..</h3>
-<h3> It really means a lot...!!</h3>
- <!-- <button id="submitBtn" onclick="tap()">Submit</button> -->
-</div>
+  <div class="class">
+    <h2>Thanks for visiting...!!</h2>
+
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3>Thanks for your contributions..</h3>
+  </div>
 </body>
 </html>
